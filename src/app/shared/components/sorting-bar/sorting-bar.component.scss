@@ -1,0 +1,17 @@
+@import 'src/styles/vars';
+
+.sorting-bar {
+  height: 300px;
+  width: 100%;
+  background-color: $color-primary;
+  color: #ffffff;
+  display: inline-block;
+
+  &.current-index {
+    background-color: black;
+  }
+
+  &.comparable-index {
+    background-color: red;
+  }
+}

@@ -1,9 +1,17 @@
 
 <mat-card>
   <mat-card-content>
-    <app-sorting-bar *ngFor="let item of items" [value]="item"></app-sorting-bar>
+    <div class="sorting-chart">
+      <app-sorting-bar
+        *ngFor="let item of items; let index = index"
+        [isCurrentIndex]="index === this.currentIndex"
+        [isComparableIndex]="index === this.comparableIndex"
+        [value]="item"></app-sorting-bar
+      >
+    </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="sort(this.items)">START</button>
+    <button mat-button (click)="sort(this.items)">Sort</button>
+    <button mat-button (click)="reverseSort(this.items)">Reverse Sort</button>
   </mat-card-actions>
 </mat-card>
