@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // ANGULAR MATERIAL
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 // \ANGULAR MATERIAL
 
 // Кастомные компоненты
@@ -14,6 +15,7 @@ import { SortingPageComponent } from './pages/sorting-page/sorting-page.componen
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PathfindingPageComponent } from './pages/pathfinding-page/pathfinding-page.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { SortingChartComponent } from './shared/components/sorting-chart/sorting-chart.component';
 // \Кастомные модули
 
 @NgModule({
@@ -22,12 +24,14 @@ import { HeaderComponent } from './shared/components/header/header.component';
     SortingPageComponent,
     MainPageComponent,
     PathfindingPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SortingChartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
 
     // Кастомные модули
 
@@ -36,8 +40,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 
 
     // ANGULAR MATERIAL
-
-
+    MatToolbarModule,
+    MatButtonModule
     // \ANGULAR MATERIAL
   ],
   providers: [],
