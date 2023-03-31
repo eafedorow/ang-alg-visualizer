@@ -1,11 +1,17 @@
 @import 'src/styles/vars';
 
 .sorting-bar {
-  height: 300px;
+  height: 600px;
+  display: flex;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: $color-primary;
   color: #ffffff;
   display: inline-block;
+  transition: 0.2s;
 
   &.current-index {
     background-color: black;
@@ -14,4 +20,14 @@
   &.comparable-index {
     background-color: red;
   }
+
+  &.sorted {
+    background-color: lightblue;
+  }
+
+  &.swap-index {
+    background-color: lightpink;
+  }
 }
+
+

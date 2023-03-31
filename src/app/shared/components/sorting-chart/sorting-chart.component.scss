@@ -1,6 +1,15 @@
 .sorting-chart {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   column-gap: 5px;
+  height: 600px;
+}
+
+app-sorting-bar {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
 }

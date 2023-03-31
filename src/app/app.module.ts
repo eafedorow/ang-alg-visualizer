@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
 // \ANGULAR MATERIAL
 
 // Кастомные компоненты
@@ -45,7 +46,8 @@ import { SortingBarComponent } from './shared/components/sorting-bar/sorting-bar
     // ANGULAR MATERIAL
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSliderModule,
     // \ANGULAR MATERIAL
   ],
   providers: [],

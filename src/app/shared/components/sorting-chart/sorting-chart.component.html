@@ -6,12 +6,18 @@
         *ngFor="let item of items; let index = index"
         [isCurrentIndex]="index === this.currentIndex"
         [isComparableIndex]="index === this.comparableIndex"
-        [value]="item"></app-sorting-bar
+        [isSorted]="index > this.sortedIndex"
+        [isSwapIndex]="index === this.swapPair[0] || index === this.swapPair[1]"
+        [value]="item.value"
       >
+      </app-sorting-bar>
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="sort(this.items)">Sort</button>
-    <button mat-button (click)="reverseSort(this.items)">Reverse Sort</button>
+    <button mat-button (click)="sort()">Sort</button>
+    <button mat-button (click)="reversedSort()">Reverse Sort</button>
+    <mat-slider min="6" max="40" step="2" showTickMarks discrete (input)="changeArrSize($event)">
+      <input matSliderThumb>
+    </mat-slider>
   </mat-card-actions>
 </mat-card>
